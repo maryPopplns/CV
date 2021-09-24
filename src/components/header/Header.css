@@ -3,7 +3,13 @@
 #header_title {
   display: flex;
   justify-content: center;
-  font: 5em 'Space Mono', monospace;
+  font: 6em 'Space Mono', monospace;
   margin: 0.25em;
-  color: rgb(0, 255, 217);
+  color: #00ffd9;
+}
+
+#header_horizontal_rule {
+  height: 0.125em;
+  background: #00ffd9;
+  border: none;
 }
