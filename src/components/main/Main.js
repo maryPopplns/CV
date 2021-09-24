@@ -1,5 +1,6 @@
 import React from 'react';
 import './Main.css';
+import GeneralInfo from '../general_info/GeneralInfo.js';
 
 export default class Main extends React.Component {
   constructor(props) {
@@ -7,6 +8,6 @@ export default class Main extends React.Component {
     this.state = {};
   }
   render() {
-    return <main>content</main>;
+    return <GeneralInfo data={this.state} />;
   }
 }
