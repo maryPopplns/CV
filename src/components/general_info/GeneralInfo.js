@@ -4,7 +4,7 @@ export default function GeneralInfo(props) {
   return (
     <form id='general_info_form'>
       <label className='general_info_label' htmlFor='lastName'>
-        last name:
+        last name :
         <input
           className='general_info_input'
           name='lastName'
@@ -15,7 +15,7 @@ export default function GeneralInfo(props) {
         ></input>
       </label>
       <label className='general_info_label' htmlFor='firstName'>
-        first name:
+        first name :
         <input
           className='general_info_input'
           name='firstName'
@@ -26,7 +26,7 @@ export default function GeneralInfo(props) {
         ></input>
       </label>
       <label className='general_info_label' htmlFor='email'>
-        email:
+        email :
         <input
           className='general_info_input'
           type='email'
@@ -38,7 +38,7 @@ export default function GeneralInfo(props) {
         ></input>
       </label>
       <label className='general_info_label' htmlFor='phoneNumber'>
-        phoneNumber:
+        phone Number :
         <input
           className='general_info_input'
           name='phoneNumber'

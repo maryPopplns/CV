@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;600&display=swap');
 
 :root {
   --header-color: #00ffd9;
@@ -7,7 +7,8 @@
 #header_title {
   display: flex;
   justify-content: center;
-  font: 6em 'Space Mono', monospace;
+  font: 6em 'Poppins', sans-serif;
+  font-weight: 600;
   color: var(--header-color);
 }
 
