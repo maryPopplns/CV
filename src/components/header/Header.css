@@ -1,14 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
 
+:root {
+  --header-color: #00ffd9;
+}
+
 #header_title {
   display: flex;
   justify-content: center;
   font: 6em 'Space Mono', monospace;
-  color: #00ffd9;
+  color: var(--header-color);
 }
 
 #header_horizontal_rule {
   height: 0.125em;
-  background: #00ffd9;
+  background: var(--header-color);
   border: none;
 }
