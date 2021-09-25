@@ -1,0 +1,20 @@
+#general_info_form {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.general_info_input {
+  width: 15em;
+  height: 1.5em;
+  border-color: black;
+  border-radius: 0.25em;
+}
+
+.general_info_label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5em;
+  width: 20em;
+}

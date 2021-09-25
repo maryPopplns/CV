@@ -24,7 +24,6 @@ export default class Main extends React.Component {
       generalInfo[name] = value;
       return { generalInfo: generalInfo };
     });
-    console.log(this.state.generalInfo);
   };
 
   render() {

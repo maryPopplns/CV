@@ -1,9 +1,12 @@
+import './GeneralInfo.css';
+
 export default function GeneralInfo(props) {
   return (
-    <form id='general_info'>
-      <label htmlFor='lastName'>
+    <form id='general_info_form'>
+      <label className='general_info_label' htmlFor='lastName'>
         last name:
         <input
+          className='general_info_input'
           name='lastName'
           type='text'
           id='lastName'
@@ -11,9 +14,10 @@ export default function GeneralInfo(props) {
           onChange={props.onChange}
         ></input>
       </label>
-      <label htmlFor='firstName'>
+      <label className='general_info_label' htmlFor='firstName'>
         first name:
         <input
+          className='general_info_input'
           name='firstName'
           type='text'
           id='firstName'
@@ -21,21 +25,24 @@ export default function GeneralInfo(props) {
           onChange={props.onChange}
         ></input>
       </label>
-      <label htmlFor='email'>
+      <label className='general_info_label' htmlFor='email'>
         email:
         <input
+          className='general_info_input'
+          type='email'
           name='email'
-          type='text'
           id='email'
+          required
           value={props.data.generalInfo.email}
           onChange={props.onChange}
         ></input>
       </label>
-      <label htmlFor='phoneNumber'>
+      <label className='general_info_label' htmlFor='phoneNumber'>
         phoneNumber:
         <input
+          className='general_info_input'
           name='phoneNumber'
-          type='text'
+          type='tel'
           id='phoneNumber'
           value={props.data.generalInfo.phoneNumber}
           onChange={props.onChange}
