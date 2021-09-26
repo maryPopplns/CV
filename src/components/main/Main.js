@@ -18,7 +18,7 @@ export default class Main extends React.Component {
     };
   }
 
-  GeneralInfoChange = (event) => {
+  generalInfoChange = (event) => {
     const { name, value } = event.target;
     this.setState((prevState) => {
       const { generalInfo } = prevState;
@@ -27,11 +27,47 @@ export default class Main extends React.Component {
     });
   };
 
+  educationChange = (event) => {
+    const { name, value, id } = event.target;
+    this.setState((prevState) => {
+      const { education } = prevState;
+      education[id][name] = value;
+      return { education: education };
+    });
+  };
+
+  addEducation = () => {
+    const NEW_INSTITUTION = {
+      institution: '',
+      degree: '',
+      start: '',
+      end: '',
+    };
+    this.setState((prevState) => {
+      return {
+        education: [...prevState.education, NEW_INSTITUTION],
+      };
+    });
+  };
+
   render() {
+    const EDUCATION = this.state.education.map((institution, index) => {
+      return (
+        <Education
+          key={index}
+          index={index}
+          data={institution}
+          onChange={this.educationChange}
+        />
+      );
+    });
     return (
       <main>
-        <GeneralInfo onChange={this.GeneralInfoChange} data={this.state} />
-        <Education data={this.state} />
+        <GeneralInfo onChange={this.generalInfoChange} data={this.state} />
+        {EDUCATION}
+        <button id='add_education_button' onClick={this.addEducation}>
+          Add Education
+        </button>
         {/* <PracticalExperience data={this.state} /> */}
       </main>
     );
