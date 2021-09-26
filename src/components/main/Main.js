@@ -1,6 +1,7 @@
 import React from 'react';
 import './Main.css';
 import GeneralInfo from '../general_info/GeneralInfo.js';
+import Education from '../education/Education.js';
 
 export default class Main extends React.Component {
   constructor(props) {
@@ -12,12 +13,12 @@ export default class Main extends React.Component {
         email: '',
         phoneNumber: '',
       },
-      education: {},
-      experience: {},
+      education: [],
+      experience: [],
     };
   }
 
-  onGeneralInfoChange = (event) => {
+  GeneralInfoChange = (event) => {
     const { name, value } = event.target;
     this.setState((prevState) => {
       const { generalInfo } = prevState;
@@ -29,8 +30,8 @@ export default class Main extends React.Component {
   render() {
     return (
       <main>
-        <GeneralInfo onChange={this.onGeneralInfoChange} data={this.state} />
-        {/* <Education data={this.state} /> */}
+        <GeneralInfo onChange={this.GeneralInfoChange} data={this.state} />
+        <Education data={this.state} />
         {/* <PracticalExperience data={this.state} /> */}
       </main>
     );
