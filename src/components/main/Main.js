@@ -2,6 +2,7 @@ import React from 'react';
 import './Main.css';
 import GeneralInfo from '../general_info/GeneralInfo.js';
 import Education from '../education/Education.js';
+import Experience from '../experience/Experience.js';
 
 export default class Main extends React.Component {
   constructor(props) {
@@ -27,15 +28,6 @@ export default class Main extends React.Component {
     });
   };
 
-  educationChange = (event) => {
-    const { name, value, id } = event.target;
-    this.setState((prevState) => {
-      const { education } = prevState;
-      education[id][name] = value;
-      return { education: education };
-    });
-  };
-
   addEducation = () => {
     const NEW_INSTITUTION = {
       institution: '',
@@ -50,12 +42,53 @@ export default class Main extends React.Component {
     });
   };
 
+  educationChange = (event) => {
+    const { name, value, id } = event.target;
+    this.setState((prevState) => {
+      const { education } = prevState;
+      education[id][name] = value;
+      return { education: education };
+    });
+  };
+
   removeEducation = (event) => {
     const { id } = event.target;
     this.setState((prevState) => {
       const { education } = prevState;
       const FILTERED = education.filter((institution, index) => index !== +id);
       return { education: FILTERED };
+    });
+  };
+
+  addExperience = () => {
+    const NEW_EXPERIENCE = {
+      company: '',
+      title: '',
+      start: '',
+      end: '',
+    };
+    this.setState((prevState) => {
+      return {
+        experience: [...prevState.experience, NEW_EXPERIENCE],
+      };
+    });
+  };
+
+  experienceChange = (event) => {
+    const { name, value, id } = event.target;
+    this.setState((prevState) => {
+      const { experience } = prevState;
+      experience[id][name] = value;
+      return { experience: experience };
+    });
+  };
+
+  removeExperience = (event) => {
+    const { id } = event.target;
+    this.setState((prevState) => {
+      const { experience } = prevState;
+      const FILTERED = experience.filter((company, index) => index !== +id);
+      return { experience: FILTERED };
     });
   };
 
@@ -71,6 +104,18 @@ export default class Main extends React.Component {
         />
       );
     });
+    const EXPERIENCE = this.state.experience.map((company, index) => {
+      return (
+        <Experience
+          key={index}
+          index={index}
+          data={company}
+          onChange={this.experienceChange}
+          onClick={this.removeExperience}
+        />
+      );
+    });
+
     return (
       <main>
         <GeneralInfo onChange={this.generalInfoChange} data={this.state} />
@@ -78,7 +123,10 @@ export default class Main extends React.Component {
         <button id='add_education_button' onClick={this.addEducation}>
           Add Education
         </button>
-        {/* <PracticalExperience data={this.state} /> */}
+        {EXPERIENCE}
+        <button id='add_experience_button' onClick={this.addExperience}>
+          Add Experience
+        </button>
       </main>
     );
   }
