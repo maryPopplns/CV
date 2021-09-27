@@ -1,5 +1,5 @@
 import React from 'react';
-import './Main.css';
+import './main.css';
 import GeneralInfo from '../general_info/GeneralInfo.js';
 import Education from '../education/Education.js';
 import Experience from '../experience/Experience.js';
