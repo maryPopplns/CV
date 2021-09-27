@@ -50,6 +50,11 @@ export default class Main extends React.Component {
     });
   };
 
+  removeEducation = (event) => {
+    const { id } = event.target;
+    console.log(id);
+  };
+
   render() {
     const EDUCATION = this.state.education.map((institution, index) => {
       return (
@@ -58,6 +63,7 @@ export default class Main extends React.Component {
           index={index}
           data={institution}
           onChange={this.educationChange}
+          onClick={this.removeEducation}
         />
       );
     });

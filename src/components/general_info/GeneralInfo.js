@@ -1,4 +1,4 @@
-import './GeneralInfo.css';
+import './generalInfo.css';
 
 export default function GeneralInfo(props) {
   return (
