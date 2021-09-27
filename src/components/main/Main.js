@@ -52,7 +52,11 @@ export default class Main extends React.Component {
 
   removeEducation = (event) => {
     const { id } = event.target;
-    console.log(id);
+    this.setState((prevState) => {
+      const { education } = prevState;
+      const FILTERED = education.filter((institution, index) => index !== +id);
+      return { education: FILTERED };
+    });
   };
 
   render() {
