@@ -4,4 +4,4 @@
 
 - general experience using props and state
 - controlled components, using state as the sole source of information for inputs
-- figured out how to render variable amounts of custom components via event handlers
+- solved how to render variable amounts of custom components via event handlers
