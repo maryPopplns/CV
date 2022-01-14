@@ -1,5 +1,8 @@
 <h1 align='center'>CV MAKER</h1>
 
+** I didnt complete the project once I had my MVP **
+** all of the data is being placed into state correctly, the only thing left to do it visually show it **
+
 <h2 >LEARNED</h2>
 
 - learned how to manage inputs in react
