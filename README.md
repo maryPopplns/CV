@@ -1,5 +1,7 @@
 <h1 align='center'>CV MAKER</h1>
 
+[Link](https://marypopplns.github.io/cv/)
+
 ** I didnt complete the project once I had my MVP **
 ** all of the data is being placed into state correctly, the only thing left to do it visually show it **
 
